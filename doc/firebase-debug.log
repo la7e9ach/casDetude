@@ -1,0 +1,121 @@
+[debug] [2024-02-22T20:40:34.098Z] ----------------------------------------------------------------------
+[debug] [2024-02-22T20:40:34.100Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CYTech Student\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-02-22T20:40:34.100Z] CLI Version:   13.3.1
+[debug] [2024-02-22T20:40:34.100Z] Platform:      win32
+[debug] [2024-02-22T20:40:34.101Z] Node Version:  v20.11.1
+[debug] [2024-02-22T20:40:34.101Z] Time:          Thu Feb 22 2024 21:40:34 GMT+0100 (Central European Standard Time)
+[debug] [2024-02-22T20:40:34.101Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-22T20:40:34.151Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-22T20:40:34.152Z] > authorizing via signed-in user (merimizayn@cy-tech.fr)
+[debug] [2024-02-22T20:40:34.152Z] [iam] checking project pottokdatabase for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-02-22T20:40:34.153Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pottokdatabase:testIamPermissions [none]
+[debug] [2024-02-22T20:40:34.153Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pottokdatabase:testIamPermissions x-goog-quota-user=projects/pottokdatabase
+[debug] [2024-02-22T20:40:34.153Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pottokdatabase:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-02-22T20:40:34.819Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pottokdatabase:testIamPermissions 200
+[debug] [2024-02-22T20:40:34.820Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pottokdatabase:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-02-22T20:40:34.820Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/pottokdatabase/serviceAccounts/pottokdatabase@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-02-22T20:40:34.820Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/pottokdatabase/serviceAccounts/pottokdatabase@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-02-22T20:40:35.466Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/pottokdatabase/serviceAccounts/pottokdatabase@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-02-22T20:40:35.466Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/pottokdatabase/serviceAccounts/pottokdatabase@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'pottokdatabase'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-02-22T20:40:35.468Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase [none]
+[debug] [2024-02-22T20:40:35.691Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase 200
+[debug] [2024-02-22T20:40:35.691Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase {"projectId":"pottokdatabase","projectNumber":"225142157397","displayName":"PottokDatabase","name":"projects/pottokdatabase","resources":{"hostingSite":"pottokdatabase"},"state":"ACTIVE","etag":"1_42d82965-d523-4a0e-bb69-f848568b127e"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-02-22T20:40:35.697Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-02-22T20:40:35.697Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/pottokdatabase
+[debug] [2024-02-22T20:40:35.699Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-02-22T20:40:35.700Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/pottokdatabase
+[debug] [2024-02-22T20:40:35.701Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudbuild.googleapis.com [none]
+[debug] [2024-02-22T20:40:35.701Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudbuild.googleapis.com x-goog-quota-user=projects/pottokdatabase
+[debug] [2024-02-22T20:40:35.701Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/artifactregistry.googleapis.com [none]
+[debug] [2024-02-22T20:40:35.701Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/artifactregistry.googleapis.com x-goog-quota-user=projects/pottokdatabase
+[debug] [2024-02-22T20:40:36.502Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudfunctions.googleapis.com 200
+[debug] [2024-02-22T20:40:36.502Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-02-22T20:40:36.516Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudbuild.googleapis.com 200
+[debug] [2024-02-22T20:40:36.517Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-02-22T20:40:36.524Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/artifactregistry.googleapis.com 200
+[debug] [2024-02-22T20:40:36.524Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-02-22T20:40:36.539Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/runtimeconfig.googleapis.com 200
+[debug] [2024-02-22T20:40:36.539Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pottokdatabase/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-02-22T20:40:36.539Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase/adminSdkConfig [none]
+[debug] [2024-02-22T20:40:36.724Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase/adminSdkConfig 200
+[debug] [2024-02-22T20:40:36.725Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pottokdatabase/adminSdkConfig {"projectId":"pottokdatabase","storageBucket":"pottokdatabase.appspot.com"}
+[debug] [2024-02-22T20:40:36.725Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/pottokdatabase/configs [none]
+[debug] [2024-02-22T20:40:37.060Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/pottokdatabase/configs 200
+[debug] [2024-02-22T20:40:37.060Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/pottokdatabase/configs {}
+[debug] [2024-02-22T20:40:37.061Z] Customer code is not Node
+[debug] [2024-02-22T20:40:37.062Z] Validating python source
+[debug] [2024-02-22T20:40:37.063Z] Building python source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-02-22T20:40:37.065Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-22T20:40:37.071Z] Running command with virtualenv: command="C:\Users\CYTech Student\functions\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-02-22T20:40:37.205Z] stdout: C:\Users\CYTech Student\functions\venv\Lib\site-packages\firebase_functions
+
+[debug] [2024-02-22T20:40:37.213Z] Running admin server with args: ["python.exe","\"C:\\Users\\CYTech Student\\functions\\venv\\Lib\\site-packages\\firebase_functions\\private\\serving.py\""] and env: {"FIREBASE_CONFIG":"{\"projectId\":\"pottokdatabase\",\"storageBucket\":\"pottokdatabase.appspot.com\"}","GCLOUD_PROJECT":"pottokdatabase","GOOGLE_CLOUD_QUOTA_PROJECT":"pottokdatabase","ADMIN_PORT":"8081"} in C:\Users\CYTech Student\functions
+[debug] [2024-02-22T20:40:37.213Z] Running command with virtualenv: command="C:\Users\CYTech Student\functions\venv\Scripts\activate.bat", args=["","&&","python.exe","\"C:\\Users\\CYTech Student\\functions\\venv\\Lib\\site-packages\\firebase_functions\\private\\serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+[error] 
+
+[error] <unknown>:1: SyntaxWarning: invalid escape sequence '\c'
+
+[error] [2024-02-22 21:40:38,246] ERROR in app: Exception on /__/functions.yaml [GET]
+Traceback (most recent call last):
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\firebase_functions\private\serving.py", line 122, in get_functions_yaml
+    functions = get_functions()
+                ^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\firebase_functions\private\serving.py", line 40, in get_functions
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\CYTech Student\functions\main.py", line 10, in <module>
+    cred = credentials.Certificate("Desktop\casDetude\pottokdatabase-firebase-adminsdk.json")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CYTech Student\functions\venv\Lib\site-packages\firebase_admin\credentials.py", line 83, in __init__
+    with open(cert) as json_file:
+         ^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Desktop\\casDetude\\pottokdatabase-firebase-adminsdk.json'
+
+[debug] [2024-02-22T20:40:38.253Z] Got response code 500; body <!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+
+[error] 127.0.0.1 - - [22/Feb/2024 21:40:38] "GET /__/functions.yaml HTTP/1.1" 500 -
+
+[error] 127.0.0.1 - - [22/Feb/2024 21:40:38] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[debug] [2024-02-22T20:40:43.309Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\CYTech Student\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
